@@ -1,3 +1,12 @@
+      OpenRisc Codezero Microkernel Port
+
+      03.05.2010. Drasko DRASKOVIC
+
+This project represents effort in porting Codezero L4 Microkernel
+(http://l4dev.org/) to the OpenRisc 1000 (http://opencores.org/project,or1k)
+architecture.
+
+
 
 		Codezero Microkernel v0.2 Release
 
