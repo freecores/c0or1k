@@ -19,7 +19,7 @@ def autogen_rules_file(options, args):
     # Prepare default if arch not supplied
     if not options.arch:
         print "No arch supplied (-a), using `arm' as default."
-        options.arch = "arm"
+        options.arch = "or1k"
 
     # Prepare default if number of containers not supplied
     if not options.ncont:

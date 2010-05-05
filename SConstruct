@@ -57,9 +57,9 @@ env = Environment(CC = config.toolchain_kernel + 'gcc',
 		  # We don't use -nostdinc because sometimes we need standard headers,
 		  # such as stdarg.h e.g. for variable args, as in printk().
 		  CCFLAGS = ['-g', '-nostdlib', '-ffreestanding', '-std=gnu99', '-Wall', \
-		  	     '-Werror', '-march=' + gcc_arch_flag],
+		  	     '-Werror'],
 		  LINKFLAGS = ['-nostdlib', '-T' + join(builddir, 'include/l4/arch/arm/linker.lds')],
-		  ASFLAGS = ['-D__ASSEMBLY__', '-march=' + gcc_arch_flag],
+		  ASFLAGS = ['-D__ASSEMBLY__'],
 		  PROGSUFFIX = '.elf',			# The suffix to use for final executable
 		  ENV = {'PATH' : os.environ['PATH']},	# Inherit shell path
 		  LIBS = 'gcc',				# libgcc.a - This is required for division routines.

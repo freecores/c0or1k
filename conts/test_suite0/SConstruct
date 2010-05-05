@@ -47,7 +47,7 @@ LIBMEM_INCLUDE = LIBMEM_DIR
 env = Environment(CC = config.toolchain_userspace + 'gcc',
 		  # We don't use -nostdinc because sometimes we need standard headers,
 		  # such as stdarg.h e.g. for variable args, as in printk().
-		  CCFLAGS = ['-g', '-nostdlib', '-ffreestanding', '-std=gnu99', '-Wall', '-march=' + gcc_arch_flag],
+		  CCFLAGS = ['-g', '-nostdlib', '-ffreestanding', '-std=gnu99', '-Wall'],
 		  LINKFLAGS = ['-nostdlib', '-T' + "include/project_linker.lds", "-u_start"],\
 		  ASFLAGS = ['-D__ASSEMBLY__'], \
 		  PROGSUFFIX = '.elf',			# The suffix to use for final executable\
